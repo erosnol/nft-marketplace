@@ -1,4 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KronoRift NFT Marketplace
+
+KronoRift is a modern NFT marketplace built on the Fraxtal blockchain, featuring a sleek dark theme and time-inspired design. The platform enables users to discover, collect, and trade unique NFTs in a seamless environment.
+
+## Features
+
+- Modern, dark-themed UI with time-rift inspired design
+- Seamless NFT browsing and trading experience
+- Built on Fraxtal blockchain for optimal performance
+- Responsive design with glass-morphism effects
+- Animated UI elements using Framer Motion
+
+This project is built with [Next.js](https://nextjs.org) and bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 

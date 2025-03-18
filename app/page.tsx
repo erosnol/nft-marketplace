@@ -2,11 +2,12 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import Layout from '../components/layout/Layout';
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import NFTCard from '../components/marketplace/NFTCard';
+import Layout from './components/layout/Layout';
+import Button from './components/ui/Button';
+import Card from './components/ui/Card';
+import NFTCard from './components/marketplace/NFTCard';
 
 const HeroSection = styled.section`
   display: flex;
@@ -33,7 +34,7 @@ const HeroContent = styled.div`
   }
 `;
 
-const HeroTitle = styled.h1`
+const HeroTitle = styled(motion.h1)`
   font-size: ${({ theme }) => theme.typography.fontSize['4xl']};
   font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
   margin-bottom: ${({ theme }) => theme.spacing[4]};
@@ -46,14 +47,14 @@ const HeroTitle = styled.h1`
   }
 `;
 
-const HeroSubtitle = styled.p`
+const HeroSubtitle = styled(motion.p)`
   font-size: ${({ theme }) => theme.typography.fontSize.lg};
   color: ${({ theme }) => theme.colors.foreground.secondary};
   margin-bottom: ${({ theme }) => theme.spacing[6]};
   line-height: ${({ theme }) => theme.typography.lineHeight.relaxed};
 `;
 
-const ButtonGroup = styled.div`
+const ButtonGroup = styled(motion.div)`
   display: flex;
   gap: ${({ theme }) => theme.spacing[4]};
   margin-bottom: ${({ theme }) => theme.spacing[8]};
@@ -138,7 +139,7 @@ const featuredNFTs = [
     name: 'Digital Asset #142',
     image: 'https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2832&auto=format&fit=crop',
     price: '2.5',
-    currency: 'ETH',
+    currency: 'FRAX',
     creator: 'Institutional Fund',
     collection: 'Premium Assets',
   },
@@ -147,7 +148,7 @@ const featuredNFTs = [
     name: 'Financial Token #38',
     image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2864&auto=format&fit=crop',
     price: '1.8',
-    currency: 'ETH',
+    currency: 'FRAX',
     creator: 'Quantum Finance',
     collection: 'Institutional Series',
   },
@@ -156,7 +157,7 @@ const featuredNFTs = [
     name: 'Secure Vault #07',
     image: 'https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?q=80&w=2832&auto=format&fit=crop',
     price: '3.2',
-    currency: 'ETH',
+    currency: 'FRAX',
     creator: 'Blockchain Capital',
     collection: 'Security Tokens',
   },
@@ -167,11 +168,25 @@ export default function Home() {
     <Layout>
       <HeroSection>
         <HeroContent>
-          <HeroTitle>Institutional-Grade Digital Assets on Fraxtal</HeroTitle>
-          <HeroSubtitle>
+          <HeroTitle
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Institutional-Grade Digital Assets on Fraxtal
+          </HeroTitle>
+          <HeroSubtitle
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             KronoRift Finance provides a secure, compliant marketplace for high-value digital assets, built for financial institutions and professional investors.
           </HeroSubtitle>
-          <ButtonGroup>
+          <ButtonGroup
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             <Button size="lg">Explore Marketplace</Button>
             <Button variant="secondary" size="lg">Learn More</Button>
           </ButtonGroup>
